@@ -37,19 +37,84 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
+```
+FULL ADDER
+```
+![WhatsApp Image 2024-12-07 at 21 21 43_2e07b1e0](https://github.com/user-attachments/assets/b777eb51-e0e3-467e-8743-35cc101b13da)
+```
+FULL SUBTRACTOR
+```
+
+![WhatsApp Image 2024-12-07 at 21 21 46_832c58e1](https://github.com/user-attachments/assets/bff2c816-9ba1-4b97-9fbd-f9290d55542d)
+
+
 
 **Procedure**
+```
+1 Type the program in Quartus software.
 
-Write the detailed procedure here
+2 Compile and run the program.
 
+3 Generate the RTL schematic and save the logic diagram.
+
+4 Create nodes for inputs and outputs to generate the timing diagram.
+
+5 For different input combinations generate the timing diagram.
+```
 **Program:**
+```
+FULL ADDER
+```
+i)FULL ADDER
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+module fa(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+assign sum=( (a ^ b)^c);
+assign carry= ( (a & b)| ( cin &(a ^ b ));
+endmodule
+
+ii)FULL SUBTRACTOR
+
+module fs(a,b,difference,borrow);
+input a,b,bin;
+output difference,borrow;
+assign difference= ( (a ^ b)^bin);
+assign borrow= ( ( ~a & b)| ( bin & (~(a ^ b )));
+endmodule
+```
+```
+Developed by:Vasanth P
+RegisterNumber:24900136
+```
 
 **RTL Schematic**
+```
+FULL ADDER
+```
+
+![WhatsApp Image 2024-12-07 at 21 21 45_e4859efc](https://github.com/user-attachments/assets/1fac2a04-cbf2-40ef-9b16-eca7bb7f02ae)
+```
+FULL SUBTRACTOR
+```
+
+![WhatsApp Image 2024-12-07 at 21 21 43_1d53f956](https://github.com/user-attachments/assets/e8425389-de4f-4ced-bce2-a5f74002c466)
+
+
 
 **Output Timing Waveform**
+```
+FULL ADDER
+```
+
+![WhatsApp Image 2024-12-07 at 21 21 52_922e5c11](https://github.com/user-attachments/assets/36b47031-ef64-4eb9-9c9f-c7e1e2c60546)
+```
+FULL SUBTRACTOR
+```
+
+![WhatsApp Image 2024-12-07 at 21 22 03_ffe32db4](https://github.com/user-attachments/assets/6d962a7f-0a93-4b27-9c7f-9541080b2702)
+
+
 
 **Result:**
 
